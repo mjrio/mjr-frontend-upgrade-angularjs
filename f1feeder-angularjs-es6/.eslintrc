@@ -1,0 +1,23 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "globals": {
+    "ENV": true,
+    "VERSION": true,
+    "angular": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "no-console": [0, ""],
+    "prefer-arrow-callback": [0],
+    "prefer-destructuring": [0],
+    "no-useless-escape": [0],
+    "no-use-before-define": [0],
+    "import/prefer-default-export": [0],
+    "global-require": [0],
+    "arrow-body-style": [0]
+  }
+}

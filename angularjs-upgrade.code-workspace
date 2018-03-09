@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "./f1feeder-angularjs-es6"
+    },
+    {
+      "path": "./f1feeder-angularjs-ts"
+    },
+    {
+      "path": "./f1feeder-angularjs-scripts"
+    },
+    {
+      "path": "./f1feeder-angularjs-vuejs"
+    },
+    {
+      "path": "./f1feeder-angularjs-ng2"
+    }
+  ],
+  "settings": {}
+}
