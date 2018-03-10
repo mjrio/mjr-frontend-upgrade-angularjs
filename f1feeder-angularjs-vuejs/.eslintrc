@@ -10,6 +10,9 @@
     "node": true,
     "jest": true
   },
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
   "rules": {
     "no-console": [0, ""],
     "prefer-arrow-callback": [0],

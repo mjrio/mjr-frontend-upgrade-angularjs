@@ -16,7 +16,7 @@
       "path": "./f1feeder-angularjs-vuejs"
     },
     {
-      "path": "./f1feeder-angularjs-ng2"
+      "path": "./f1feeder-angularjs-ngx"
     }
   ],
   "settings": {}

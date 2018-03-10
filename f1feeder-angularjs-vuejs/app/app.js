@@ -1,4 +1,5 @@
 import 'angular';
+import 'bootstrap/dist/css/bootstrap.css';
 
 // routes
 import './app.route';

@@ -7,12 +7,17 @@ appModule.config([
       .when('/drivers', {
         template: require('./controllers/drivers.html'),
         controller: 'driversController',
-        controllerAs: 'ctrl',
+        controllerAs: '$ctrl',
       })
       .when('/drivers/:id', {
-        template: require('./controllers/driver.html'),
-        controller: 'driverController',
-        controllerAs: 'ctrl',
+        template: '<driver-overview vprops-id="id"></driver-overview>',
+        controller: [
+          '$routeParams',
+          '$scope',
+          ($routeParams, $scope) => {
+            $scope.id = $routeParams.id;
+          },
+        ],
       })
       .otherwise({ redirectTo: '/drivers' });
   },

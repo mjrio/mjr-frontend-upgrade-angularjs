@@ -10,18 +10,25 @@
         "build": "rimraf ./dist && webpack",
         "build:prod": "rimraf ./dist && webpack --config webpack.config.prod.js",
         "lint:app": "eslint './app/**/*.js'",
-        "format": "prettier --write './**/*.{js,json,css}'"
+        "format": "prettier --write './**/*.{js,json,css}'",
+        "test": "jest --watch"
     },
     "dependencies": {
         "angular": "^1.6.9",
+        "angular-async-await": "^1.1.2",
         "angular-route": "^1.6.9",
+        "axios": "^0.18.0",
+        "bootstrap": "3.3.7",
+        "luxon": "^0.5.3",
         "ngVue": "^0.6.0",
         "vue": "^2.5.13"
     },
     "devDependencies": {
         "autoprefixer-loader": "^3.2.0",
         "babel-core": "^6.26.0",
+        "babel-eslint": "^8.2.2",
         "babel-loader": "7.1.4",
+        "babel-plugin-transform-runtime": "^6.23.0",
         "babel-preset-env": "^1.6.1",
         "copy-webpack-plugin": "^4.5.0",
         "css-loader": "^0.28.10",
@@ -31,8 +38,11 @@
         "eslint-plugin-import": "^2.8.0",
         "eslint-plugin-vue": "^4.3.0",
         "extract-text-webpack-plugin": "^3.0.2",
+        "file-loader": "^1.1.11",
         "html-loader": "^0.5.5",
         "html-webpack-plugin": "^3.0.6",
+        "intl": "^1.2.5",
+        "jest": "^22.4.2",
         "prettier": "^1.11.1",
         "rimraf": "^2.6.2",
         "style-loader": "^0.20.2",
@@ -41,5 +51,9 @@
         "vue-template-compiler": "^2.5.13",
         "webpack": "3.10.0",
         "webpack-dev-server": "2.7.1"
+    },
+    "jest": {
+      "verbose": true,
+      "setupTestFrameworkScriptFile": "<rootDir>/setupJest.js"
     }
 }
