@@ -71,29 +71,16 @@ If you still want to have an incremental migration these are the steps to take.
     *   Prefere AngularJS components (AngularJS v1.5+)
     *   Prefere Linter (Eslint) & code formatter (Prettier)
 
-*   Migrate to Angular (Angular2+)
-
-    *   Migrate to Typescript (required)
-    *   Add Angular to your AngularJS app
-        *   Use @angular/upgrade
-    *   Prefere to separete your AngularJS and VueJS code as much as possible. The router is a good base to make the separation.
-    *   Split your unit test setup/runs for AngularJS (Karma) & Angular (Jest)
-    *   Write new feature in Angular
-    *   When an AngularJS feature changes, re-write it in Angular
-    *   When all is migrated to remove AngularJS completely
-    *   Migrate to @angular/cli
-
-*   Migrate to VueJS
-    *   Migrate to Typescript (optional)
-    *   Add VueJS to your AngularJS app
-        *   Use NgVue or setup your own solution
-    *   Prefere to separete your AngularJS and VueJS code as much as possible. The router is a good base to make the separation.
-    *   Split your unit test setup/runs for AngularJS (Karma) & VueJS (Jest)
-    *   Write new feature in VueJS
-    *   Prefer to use Vuex for your state management
-    *   When an AngularJS feature changes, re-write it in VueJS
-    *   When all is migrated to remove AngularJS completely
-    *   Migrate to vue-cli or Nuxt
+*   Migrate to Typescript (required for Angular, optional for VueJS)
+*   Add Anglar to your AngularJS app (@angular/upgrade)
+*   Or add VueJS to your AngularJS app (NgVue)
+*   Prefer to separate your AngularJS and VueJS/Angular code as much as possible. The router is a good base to make the separation.
+*   Prefer to write framework independent code. This code can be shared by both frameworks
+*   Split your unit test setup/runs per framework.
+*   Write new feature in the new framework
+*   When an AngularJS feature changes, re-write it in the new framework
+*   When all is migrated to remove AngularJS completely
+*   Migrate to @angular/cli (Angular) or Vue-cli (VueJS)
 
 ## Angular or VueJS
 
@@ -152,6 +139,12 @@ Different but equal (template syntax)
 *   [John Papa: A Look at Angular Alongside Vue - File Structure](https://johnpapa.net/a-look-at-angular-alongside-vue-1/)
 *   [The State of JavaScript 2017](https://stateofjs.com/)
 *   [Angular vs. React vs. Vue: A 2017 comparison](https://medium.com/unicorn-supplies/angular-vs-react-vs-vue-a-2017-comparison-c5c52d620176)
+
+### Libraries
+
+*   [LogLevel - Logger](https://github.com/pimterry/loglevel)
+*   [Axios - Http Client](https://github.com/axios/axios)
+*   [ngVue](https://github.com/ngVue/ngVue)
 
 ### AngularJS to Angular
 
