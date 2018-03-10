@@ -1,9 +1,12 @@
+import log from 'loglevel';
 import apiService from '../core/services/apiService';
 
 export class DriversController {
   constructor($q) {
     this.nameFilter = null;
     this.driversList = [];
+
+    log.info('loading driver (AngularJS)');
 
     // with $http service
     // apiService.getDrivers().then(data => {
@@ -23,7 +26,9 @@ export class DriversController {
   searchFilter(driver) {
     const re = new RegExp(this.nameFilter, 'i');
     return (
-      !this.nameFilter || re.test(driver.Driver.givenName) || re.test(driver.Driver.familyName)
+      !this.nameFilter ||
+      re.test(driver.Driver.givenName) ||
+      re.test(driver.Driver.familyName)
     );
   }
 }
