@@ -1,10 +1,12 @@
 import angular from 'angular';
-import { interpolate } from './interpolate';
-import { checkMark } from './checkMark';
+import { dateFormatter } from '../core/formatters/data.formatter';
+import { ordinalFormatter } from '../core/formatters/ordinal.formatter';
+import { currencyFormatter } from '../core/formatters/currency.formatter';
 
 const module = angular
   .module('myApp.filters', [])
-  .filter('interpolate', interpolate)
-  .filter('checkmark', checkMark);
+  .filter('myDate', () => dateFormatter)
+  .filter('ordinal', () => ordinalFormatter)
+  .filter('currency', () => currencyFormatter);
 
 export default module.name;

@@ -1,10 +1,10 @@
 import angular from 'angular';
-import { interpolate } from './interpolate';
-import { checkMark } from './checkMark';
+import { myDateFilter } from './myDate';
+import { ordinalFilter } from './ordinal';
 
-const moduleName = angular
+const module = angular
   .module('myApp.filters', [])
-  .filter('interpolate', interpolate)
-  .filter('checkmark', checkMark).name;
+  .filter('myDate', myDateFilter)
+  .filter('ordinal', ordinalFilter);
 
-export default moduleName;
+export default module.name;
