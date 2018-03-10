@@ -113,8 +113,14 @@ When considering Angular or VueJS here some point to take into account:
     *   Can be used without webpack and runs with ES5
     *   Simple change tracking
     *   No dependency injection
-    *   Lightweight (smaller bundles, faster dev cycle). He, there is even support for web components
+    *   Lightweight (smaller bundles, faster dev cycle).
     *   Faster and easier to unit test
+
+Bundle Sizes (prod)
+
+| AngularJS | Angular | VueJS |
+| --------- | ------- | ----- |
+| 200k      | 1.916k  | 396k  |
 
 Different but equal (template syntax)
 

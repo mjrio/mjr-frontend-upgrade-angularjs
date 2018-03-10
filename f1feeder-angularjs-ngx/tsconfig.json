@@ -10,5 +10,5 @@
     "emitDecoratorMetadata": true,
     "lib": ["es2015", "dom"]
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

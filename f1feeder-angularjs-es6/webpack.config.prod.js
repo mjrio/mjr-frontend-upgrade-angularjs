@@ -17,12 +17,17 @@ module.exports = {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] },
       { test: /\.html$/, exclude: /node_modules/, loader: 'html-loader' },
-      { test: /\.png$/, exclude: /node_modules/, loader: 'url-loader?mimetype=image/png' },
+      {
+        test: /\.png$/,
+        exclude: /node_modules/,
+        loader: 'url-loader?mimetype=image/png',
+      },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader?sourceMap!autoprefixer-loader?browsers=last 2 versions',
+          use:
+            'css-loader?sourceMap!autoprefixer-loader?browsers=last 2 versions',
         }),
       },
       {
@@ -36,6 +41,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.optimize.UglifyJsPlugin({ minimize: true }),
     new CopyWebpackPlugin([
       { context: './app/img/', from: '**/*', to: './img' },
       { from: './app/index.html', to: 'index.html' },

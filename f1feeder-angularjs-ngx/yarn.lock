@@ -346,6 +346,13 @@ aws4@^1.2.1:
   version "1.6.0"
   resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
+axios@^0.18.0:
+  version "0.18.0"
+  resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  dependencies:
+    follow-redirects "^1.3.0"
+    is-buffer "^1.1.5"
+
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/babel-code-frame/-/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
@@ -1122,6 +1129,12 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.8:
   dependencies:
     ms "2.0.0"
 
+debug@^3.1.0:
+  version "3.1.0"
+  resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  dependencies:
+    ms "2.0.0"
+
 decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
@@ -1753,6 +1766,12 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
+
+follow-redirects@^1.3.0:
+  version "1.4.1"
+  resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/follow-redirects/-/follow-redirects-1.4.1.tgz#d8120f4518190f55aac65bb6fc7b85fcd666d6aa"
+  dependencies:
+    debug "^3.1.0"
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -2688,6 +2707,10 @@ lru-cache@^4.0.1, lru-cache@^4.1.1:
   dependencies:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
+
+luxon@^0.5.4:
+  version "0.5.4"
+  resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/luxon/-/luxon-0.5.4.tgz#61cc07f8ba900647d586c05c20cad9d0338e6f4c"
 
 macaddress@^0.2.8:
   version "0.2.8"
