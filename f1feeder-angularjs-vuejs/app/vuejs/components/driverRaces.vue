@@ -28,7 +28,7 @@
 <script>
 export default {
   props: {
-    races: Object,
+    races: Array,
   },
 };
 </script>

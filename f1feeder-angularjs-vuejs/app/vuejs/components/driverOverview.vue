@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import log from 'loglevel';
 import apiService from '../../core/services/apiService';
 import Driver from './driver.vue';
 import DriverRaces from './driverRaces.vue';
@@ -31,6 +32,7 @@ export default {
     };
   },
   created() {
+    log.info('loading data (VueJS)');
     apiService.getDriverDetails(this.id).then(driver => {
       this.driver = driver;
     });

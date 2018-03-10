@@ -4159,7 +4159,7 @@ lodash@^4.13.1, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, 
   version "4.17.5"
   resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
-loglevel@^1.4.1:
+loglevel@^1.4.1, loglevel@^1.6.1:
   version "1.6.1"
   resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/loglevel/-/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
 

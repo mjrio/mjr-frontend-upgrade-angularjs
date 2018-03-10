@@ -19,6 +19,7 @@
         "angular-route": "^1.6.9",
         "axios": "^0.18.0",
         "bootstrap": "3.3.7",
+        "loglevel": "^1.6.1",
         "luxon": "^0.5.3",
         "ngVue": "^0.6.0",
         "vue": "^2.5.13"
@@ -53,7 +54,7 @@
         "webpack-dev-server": "2.7.1"
     },
     "jest": {
-      "verbose": true,
-      "setupTestFrameworkScriptFile": "<rootDir>/setupJest.js"
+        "verbose": true,
+        "setupTestFrameworkScriptFile": "<rootDir>/setupJest.js"
     }
 }
