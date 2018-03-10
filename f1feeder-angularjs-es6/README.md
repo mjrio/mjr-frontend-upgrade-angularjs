@@ -2,24 +2,18 @@
 
 ## Getting Started
 
-All you need to do is,
+Commands:
 
-Install the dependencies:
+```bash
+# install dependencies (required)
+yarn
 
-```
-npm install
-```
+# start the app (http://localhost:8080)
+yarn serve
 
-Then, run the Application:
-
-```
-npm serve
-```
-
-You can access your app at
-
-```
-http://localhost:5000
+# build the app
+yarn build
+yarn build:prod
 ```
 
 ## Upgrade to npm, bundeling,formatting and linting

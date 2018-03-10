@@ -2,22 +2,12 @@
 
 ## Getting Started
 
-All you need to do is,
+Commands:
 
-Install the dependencies:
+```bash
+# install dependencies (required)
+yarn
 
-```
-npm install
-```
-
-Then, run the Application:
-
-```
-npm serve
-```
-
-You can access your app at
-
-```
-http://localhost:5000
+# start the app (http://localhost:5000)
+yarn serve
 ```
