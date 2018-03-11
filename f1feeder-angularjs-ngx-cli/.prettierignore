@@ -1,0 +1,7 @@
+tsconfig.json
+tsconfig.app.json
+tsconfig.spec.json
+stats.json
+.vscode
+.angular-cli.json
+node_modules/**/*

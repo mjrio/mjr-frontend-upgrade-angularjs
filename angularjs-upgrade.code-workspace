@@ -17,6 +17,9 @@
     },
     {
       "path": "./f1feeder-angularjs-ngx"
+    },
+    {
+      "path": "f1feeder-angularjs-ngx-cli"
     }
   ],
   "settings": {}

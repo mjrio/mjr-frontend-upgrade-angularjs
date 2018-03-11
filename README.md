@@ -116,11 +116,12 @@ When considering Angular or VueJS here some point to take into account:
     *   Lightweight (smaller bundles, faster dev cycle).
     *   Faster and easier to unit test
 
-Bundle Sizes (prod)
+Bundle Sizes/ Build time (prod)
 
-| AngularJS | Angular | VueJS |
-| --------- | ------- | ----- |
-| 200k      | 1.916k  | 396k  |
+|            | AngularJS | Angular | VueJS |
+| ---------- | --------- | ------- | ----- |
+| Size       | 200k      | 620k    | 396k  |
+| Build Time | 7sec      | 27sec   | 9sec  |
 
 Different but equal (template syntax)
 

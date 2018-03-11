@@ -1,13 +1,14 @@
+import log from 'loglevel';
+import apiService from '../core/services/apiService';
+
 export class DriversController {
   nameFilter: string = null;
   driversList = [];
-  title = 'just a test';
 
-  static $inject = ['apiService'];
-  constructor(apiService) {
-    apiService.getDrivers().then(data => {
-      // Digging into the response to get the relevant data
-      this.driversList = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+  static $inject = ['$q'];
+  constructor($q) {
+    $q.when(apiService.getDrivers()).then(drivers => {
+      this.driversList = drivers;
     });
     this.searchFilter = this.searchFilter.bind(this);
   }
@@ -18,46 +19,4 @@ export class DriversController {
       !this.nameFilter || re.test(driver.Driver.givenName) || re.test(driver.Driver.familyName)
     );
   }
-
-  onUpdated(event) {
-    console.log('AJS: ', event);
-  }
 }
-
-// $scope version
-// export class DriversController {
-//   static $inject = ['$scope', 'apiService'];
-//   constructor($scope, apiService) {
-//     $scope.nameFilter = null;
-//     $scope.driversList = [];
-//     $scope.searchFilter = driver => {
-//       const re = new RegExp($scope.nameFilter, 'i');
-//       return (
-//         !$scope.nameFilter || re.test(driver.Driver.givenName) || re.test(driver.Driver.familyName)
-//       );
-//     };
-
-//     apiService.getDrivers().then(data => {
-//       // Digging into the response to get the relevant data
-//       $scope.driversList = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
-//     });
-//   }
-// }
-
-// ES6 version
-// driversController.$inject = ['$scope', 'apiService'];
-// export default function driversController($scope, apiService) {
-//   $scope.nameFilter = null;
-//   $scope.driversList = [];
-//   $scope.searchFilter = driver => {
-//     const re = new RegExp($scope.nameFilter, 'i');
-//     return (
-//       !$scope.nameFilter || re.test(driver.Driver.givenName) || re.test(driver.Driver.familyName)
-//     );
-//   };
-
-//   apiService.getDrivers().then(data => {
-//     // Digging into the response to get the relevant data
-//     $scope.driversList = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
-//   });
-// }
