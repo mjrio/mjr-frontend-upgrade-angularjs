@@ -14,7 +14,6 @@
         "test": "jest --watch"
     },
     "dependencies": {
-        "angular": "^1.6.9",
         "angular-async-await": "^1.1.2",
         "angular-route": "^1.6.9",
         "axios": "^0.18.0",

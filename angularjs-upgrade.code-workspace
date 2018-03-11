@@ -20,6 +20,9 @@
     },
     {
       "path": "f1feeder-angularjs-ngx-cli"
+    },
+    {
+      "path": "f1feeder-angularjs-vuejs-cli"
     }
   ],
   "settings": {}

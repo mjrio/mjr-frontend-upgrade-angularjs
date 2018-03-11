@@ -17,11 +17,9 @@ WebPack is used to bundle the JavaScript.
 A hybrid, combining AngularJS & Angular or Vuejs, into a single app is possible but requires good knowledge of both frameworks. If you just starting to learn the new framework you will have a hard time ahead of you.
 
 *   You need knowledge of the internals of both frameworks. How are they conflicting and how are they working together.
-*   You need to have knowledge of WebPack (or another bundeling tool) to serve/build the app. Today almost every framework has a cli (command line) that abstracts the complexity away. But for a hybrid app you can't use these tooling and have to build/configure it yourself.
-*   When thing go wrong it's not always clear where the problem is located. You get a mix of AngularJS and Angular/VueJS errors. What can lead to confusion.
+*   When thing go wrong it's not always clear where the problem is located. You get a mix of AngularJS and Angular/VueJS errors. This can lead to confusion.
 *   You will have double implementations of some services or utilities. For example you can't re-use a pipe (or filter) in AngularJS vs Angular. You will have to maintain them both.
 *   If the couping of components is so high that changes to a single component cannot be isolated from other components it will be hard to migrate without a big re-write.
-*   You will not gain by the advanced/new features (available free) of the new framework; eg bundle splitting and optimization, lazy loading, fast development workflow, component libraries, testing, scaffolding, etc...
 *   There is litte, no and incorrect documentation/support available to make the two frameworks work together. Your have to figure it out yourself.
 
 ### Consider
@@ -40,14 +38,14 @@ A hybrid, combining AngularJS & Angular or Vuejs, into a single app is possible 
 
     *   Share data between apps via session/local storage and/or cookies.
 
-*   To how long are your going to support the old framework? Be carefull that your don't keep the old framework forever.
-*   To which team will do the migration? Developers usually prefer to work on green field projects. You should take that into account when planning who will maintain the legacy version and who will work on the new one.
+*   How long are your going to support the old framework? Be carefull that your don't keep the old framework forever.
+*   Which team will do the migration? Developers usually prefer to work on green field projects. You should take that into account when planning who will maintain the legacy version and who will work on the new one.
 
 ### Keep your AngularJS
 
 And finally consider to maybe not to migrate at all. AngularJS will still be supported for a [long time](https://blog.angular.io/stable-angularjs-and-long-term-support-7e077635ee9c). You can modernize your developer setup (webpack, typescript, npm, components, etc) but keep AngularJS for your exiting application.
 
-## I want to migrate, which steps to take:
+## He, I want to migrate. Which steps should I take?
 
 If you still want to have an incremental migration these are the steps to take.
 
@@ -58,29 +56,41 @@ If you still want to have an incremental migration these are the steps to take.
 *   Migrate script tags to ESM ([ES Modules](http://2ality.com/2014/09/es6-modules-final.html))
 
     *   Create ES Modules
-    *   No more IIFE, no 'use strict'
+    *   No more IIFE and 'use strict'
     *   Use Import/Export
     *   Use Javascript bundler (Webpack)
 
 *   Migrate your javascript (improve your code)
 
-    *   Prefere ES6+ language features
-    *   Prefere to write universal javascript (platform independent)
-    *   Prefere to follow the [AngularJS Styleguide](https://github.com/johnpapa/angular-styleguide)
-    *   Prefere to follow a JavaScript styleguide ([AirBnb](https://github.com/airbnb/javascript), [Standard](https://standardjs.com/), ...)
-    *   Prefere AngularJS components (AngularJS v1.5+)
-    *   Prefere Linter (Eslint) & code formatter (Prettier)
+    *   Prefer ES6+ language features
+    *   Prefer to write universal javascript (platform independent)
+    *   Prefer to follow the [AngularJS Styleguide](https://github.com/johnpapa/angular-styleguide)
+    *   Prefer to follow a JavaScript styleguide ([AirBnb](https://github.com/airbnb/javascript), [Standard](https://standardjs.com/), ...)
+    *   Prefer AngularJS components (AngularJS v1.5+)
+    *   Prefer Linter (Eslint) & code formatter (Prettier)
 
-*   Migrate to Typescript (required for Angular, optional for VueJS)
-*   Add Anglar to your AngularJS app (@angular/upgrade)
-*   Or add VueJS to your AngularJS app (NgVue)
-*   Prefer to separate your AngularJS and VueJS/Angular code as much as possible. The router is a good base to make the separation.
-*   Prefer to write framework independent code. This code can be shared by both frameworks
-*   Split your unit test setup/runs per framework.
-*   Write new feature in the new framework
-*   When an AngularJS feature changes, re-write it in the new framework
-*   When all is migrated to remove AngularJS completely
-*   Migrate to @angular/cli (Angular) or Vue-cli (VueJS)
+*   Migrate to Typescript (optional for VueJS)
+
+*   Migrate to @Angular/CLI
+
+    *   Start with a standard AngularCLI
+    *   Add/cleanup your favor test setup (Jest, Karma, E2E)
+    *   Add @angular/upgrade
+    *   Add AnguarJS and move the old app into the new files structure
+    *   Separate common code (services, filters)
+
+-   Or Migrate to @vue/cli
+
+    *   Start with a standard VueCLI
+    *   Add NgVue
+    *   Add AnguarJS and move the old app into the new files structure
+    *   Separate common code (services, filters)
+
+-   Prefer to separate your AngularJS and VueJS/Angular code as much as possible. The router is a good base to make this separation.
+-   Prefer to write framework independent code. This code can be shared by both frameworks
+-   Write new feature in the new framework
+-   When an AngularJS feature changes, re-write it in the new framework
+-   When all is migrated to remove AngularJS completely
 
 ## Angular or VueJS
 
@@ -93,10 +103,10 @@ When considering Angular or VueJS here some point to take into account:
 *   Angular is more complete and powerfull but has added complexity:
 
     *   It's an opinionated framework: the Angular way
-    *   High learning curve
+    *   Higher learning curve
     *   Typescript and typing
     *   RXJS and the world of observables
-    *   Complex/slow bundeling and AOT compilation
+    *   Complex/slower bundeling and AOT compilation
     *   Dependency Injection
     *   Less univeral javascript code
     *   Change detection and zones is hard.
@@ -120,8 +130,9 @@ Bundle Sizes/ Build time (prod)
 
 |            | AngularJS | Angular | VueJS |
 | ---------- | --------- | ------- | ----- |
-| Size       | 200k      | 620k    | 396k  |
-| Build Time | 7sec      | 27sec   | 9sec  |
+| Size       | 200k      | 620k    | 334k  |
+| Build Time | 7sec      | 27sec   | 16sec |
+| Serve      | 7sec      | 17sec   | 8sec  |
 
 Different but equal (template syntax)
 

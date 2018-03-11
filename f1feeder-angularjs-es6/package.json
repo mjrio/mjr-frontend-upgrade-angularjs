@@ -6,7 +6,7 @@
     "repository": "https://github.com/angular/angular-seed",
     "license": "MIT",
     "scripts": {
-        "serve": "webpack-dev-server",
+        "serve": "webpack-dev-server --open",
         "build": "rimraf ./dist && webpack",
         "build:prod": "rimraf ./dist && webpack --config webpack.config.prod.js",
         "lint:app": "eslint './app/**/*.js'",

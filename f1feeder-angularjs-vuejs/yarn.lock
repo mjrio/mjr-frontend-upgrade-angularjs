@@ -176,10 +176,6 @@ angular-route@^1.6.9:
   version "1.6.9"
   resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/angular-route/-/angular-route-1.6.9.tgz#73c63cec6a8a6b924698aec635eac32aa41f5e2b"
 
-angular@^1.6.9:
-  version "1.6.9"
-  resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/angular/-/angular-1.6.9.tgz#bc812932e18909038412d594a5990f4bb66c0619"
-
 ansi-escapes@^3.0.0:
   version "3.0.0"
   resolved "https://kpdservices.pkgs.visualstudio.com/_packaging/KpdNpm/npm/registry/ansi-escapes/-/ansi-escapes-3.0.0.tgz#ec3e8b4e9f8064fc02c3ac9b65f1c275bda8ef92"
