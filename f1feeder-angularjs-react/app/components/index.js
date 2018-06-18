@@ -1,9 +1,9 @@
 import angular from 'angular';
 import { react2angular } from 'react2angular';
-import MyComponent from './myComponent';
+import DriverOverviewComponent from './driverOverview';
 
 const module = angular
   .module('myApp.components', [])
-  .component('myComponent', react2angular(MyComponent, null, ['$http']));
+  .component('driverOverview', react2angular(DriverOverviewComponent));
 
 export default module.name;

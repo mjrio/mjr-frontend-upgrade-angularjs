@@ -1,6 +1,6 @@
-import angular from 'angular';
-import apiService from './apiService';
+import module from './services.module';
 
-const module = angular.module('myApp.services', []).factory('apiService', apiService);
+// import all services here
+import './apiService';
 
 export default module.name;

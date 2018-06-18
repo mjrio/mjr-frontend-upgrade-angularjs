@@ -2,8 +2,10 @@
 
 This repository shows a migration path from plain old AngularJS (scripts & bower) to
 
+*   AngularJS in ES5
 *   AngularJS in ES6
 *   AngularJS in ES6 + VueJS
+*   AngularJS in ES6 + React
 *   AngularJS in Typescript
 *   AngularJS in Typescript + Angular (with @angular/upgrade)
 
@@ -14,13 +16,13 @@ WebPack is used to bundle the JavaScript.
 
 ## Hybrid apps are hard
 
-A hybrid, combining AngularJS & Angular or Vuejs, into a single app is possible but requires good knowledge of both frameworks. If you just starting to learn the new framework you will have a hard time ahead of you.
+A hybrid, combining AngularJS with Angular, React or Vuejs, into a single app is possible but requires good knowledge of both frameworks. If you just starting to learn the new framework you will have a hard time ahead of you.
 
 *   You need knowledge of the internals of both frameworks. How are they conflicting and how are they working together.
-*   When thing go wrong it's not always clear where the problem is located. You get a mix of AngularJS and Angular/VueJS errors. This can lead to confusion.
-*   You will have double implementations of some services or utilities. For example you can't re-use a pipe (or filter) in AngularJS vs Angular. You will have to maintain them both.
+*   When things go wrong it's not always clear where the problem is located. You get a mix of AngularJS and Angular/React/VueJS errors. This can lead to confusion.
+*   You will have double implementations of some services or utilities. For example you can't re-use a pipe (or filter) in AngularJS vs Angular. You will have to maintain them both. 
 *   If the couping of components is so high that changes to a single component cannot be isolated from other components it will be hard to migrate without a big re-write.
-*   There is litte, no and incorrect documentation/support available to make the two frameworks work together. Your have to figure it out yourself.
+*   There is litte, no and incorrect documentation/support available to make multiple frameworks work together. Your have to figure it out yourself.
 
 ### Consider
 
@@ -77,16 +79,23 @@ If you still want to have an incremental migration these are the steps to take.
     *   Add/cleanup your favor test setup (Jest, Karma, E2E)
     *   Add @angular/upgrade
     *   Add AnguarJS and move the old app into the new files structure
-    *   Separate common code (services, filters)
+    *   Separate common code (services, pipes/filters)
 
 -   Or Migrate to @vue/cli
 
-    *   Start with a standard VueCLI
+    *   Start with a standard Vue CLI
     *   Add NgVue
     *   Add AnguarJS and move the old app into the new files structure
     *   Separate common code (services, filters)
 
--   Prefer to separate your AngularJS and VueJS/Angular code as much as possible. The router is a good base to make this separation.
+-   Or Migrate to React
+
+    *   Start with create-react-app or build your own webpack setup
+    *   Add react2angular
+    *   Add AnguarJS and move the old app into the new files structure
+    *   Separate common code (services)
+
+-   Prefer to separate your AngularJS and VueJS/Angular/React code as much as possible. The router is a good base to make this separation.
 -   Prefer to write framework independent code. This code can be shared by both frameworks
 -   Write new feature in the new framework
 -   When an AngularJS feature changes, re-write it in the new framework
@@ -103,7 +112,7 @@ When considering Angular or VueJS here some point to take into account:
 *   Angular is more complete and powerfull but has added complexity:
 
     *   It's an opinionated framework: the Angular way
-    *   Higher learning curve
+    *   Higher and long learning curve
     *   Typescript and typing
     *   RXJS and the world of observables
     *   Complex/slower bundeling and AOT compilation
@@ -115,6 +124,7 @@ When considering Angular or VueJS here some point to take into account:
 *   VueJS is easy to start with:
     *   Simple learning curve
     *   More pure javascript code
+    *   Close to AngularJS template syntax
     *   More freedom to choose:
         *   ES5 vs ES6 vs TypeScript
         *   Callbacks, promises or observables
@@ -123,16 +133,32 @@ When considering Angular or VueJS here some point to take into account:
     *   Can be used without webpack and runs with ES5
     *   Simple change tracking
     *   No dependency injection
-    *   Lightweight (smaller bundles, faster dev cycle).
+    *   Lightweight (smaller bundles, faster dev cycle)
     *   Faster and easier to unit test
+    *   Average Typescript support
+
+*   React is more pure javascript:
+    *   Initial high learning curve but gets easier once you know jsx & redux
+    *   More pure javascript code, important you know ES6+ features.
+    *   More freedom to choose:
+        *   ES5, ES6, Flow vs TypeScript
+        *   Callbacks, promises or observables
+        *   Fetch, Axios, custom http service
+    *   Works best with flux pattern (redux/modx)
+    *   Simple change tracking
+    *   No dependency injection
+    *   Lightweight (smaller bundles, faster dev cycle)
+    *   Faster and easier to unit test
+    *   Full support for hot reloading (css & code)
+    *   Full Typescript support
 
 Bundle Sizes/ Build time (prod)
 
-|            | AngularJS | Angular | VueJS |
-| ---------- | --------- | ------- | ----- |
-| Size       | 200k      | 620k    | 334k  |
-| Build Time | 7sec      | 27sec   | 16sec |
-| Serve      | 7sec      | 17sec   | 8sec  |
+|            | AngularJS | Angular | VueJS | React |
+| ---------- | --------- | ------- | ----- | ----- |
+| Size       | 200k      | 620k    | 334k  |  118k |
+| Build Time | 7sec      | 27sec   | 16sec |  7sec |
+| Serve      | 7sec      | 17sec   | 8sec  |  6sec |
 
 Different but equal (template syntax)
 
@@ -162,7 +188,8 @@ Different but equal (template syntax)
 
 *   [LogLevel - Logger](https://github.com/pimterry/loglevel)
 *   [Axios - Http Client](https://github.com/axios/axios)
-*   [ngVue](https://github.com/ngVue/ngVue)
+*   [ngVue - AngularJS VueJS helper](https://github.com/ngVue/ngVue)
+*   [react2angular - AngularJS react helper](https://github.com/coatue-oss/react2angular)
 
 ### AngularJS to Angular
 
@@ -181,3 +208,8 @@ Different but equal (template syntax)
 *   [Migrating to VueJS — Another way – Lucas Katayama](https://medium.lucaskatayama.com/migrating-to-vuejs-389745001c11)
 *   [How to embed Vue.js & Vuex inside an AngularJS app… wait what? - Cushion](https://cushionapp.com/journal/vuejs-inside-angularjs)
 *   [Progressively migrating from AngularJS to Vue.js at Unbabel](https://medium.com/unbabel-dev/progressively-migrating-from-angularjs-to-vue-js-at-unbabel-581eb4ae022d)
+
+### AngularJS to React
+
+*   [How to migrate an application from AngularJS to React and Redux](https://hackernoon.com/how-to-migrate-an-application-from-angularjs-to-react-and-redux-de0e2d1f70aa)
+*   [How to convert an AngularJS 1.x app to a React app — one component at a time](https://medium.freecodecamp.org/how-to-convert-an-angular-app-to-a-react-app-one-component-at-a-time-ba985eaae66e)

@@ -147,7 +147,7 @@ User service
 
 ```js
 // user.service.js
-export default function userService($http) {
+export function userServiceFn($http) {
   this.getAll = function() {
     return $http.get('/url');
   };
@@ -155,7 +155,7 @@ export default function userService($http) {
 
 // app.module.js
 import userService from './user.service.js';
-angular.module('myApp', []).service('userService', userService);
+angular.module('myApp', []).service('userService', userServiceFn);
 ```
 
 Expose the legacy service as follows
@@ -165,7 +165,7 @@ Expose the legacy service as follows
 import { module } from 'angular';
 export let userService = undefined;
 
-module('myModule').run(function($injector) {
+module('myApp').run(function($injector) {
   userService = $injector.get('userService');
 });
 ```

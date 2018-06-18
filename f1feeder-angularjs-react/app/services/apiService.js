@@ -1,4 +1,6 @@
-export default function apiService($http) {
+import module from './services.module';
+
+export function apiServiceFn($http) {
   const ergastAPI = {};
 
   ergastAPI.getDrivers = () => {
@@ -30,3 +32,13 @@ export default function apiService($http) {
 
   return ergastAPI;
 }
+
+// eslint-disable-next-line
+export let apiService;
+
+// prettier-ignore
+module
+  .factory('apiService', apiServiceFn)
+  .run($injector => {
+    apiService = $injector.get('apiService');
+  });

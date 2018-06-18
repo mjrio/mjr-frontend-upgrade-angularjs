@@ -9,10 +9,20 @@ appModule.config([
         controller: 'driversController',
         controllerAs: '$ctrl',
       })
+      // .when('/drivers/:id', {
+      //   template: require('./controllers/driver.html'),
+      //   controller: 'driverController',
+      //   controllerAs: '$ctrl',
+      // })
       .when('/drivers/:id', {
-        template: require('./controllers/driver.html'),
-        controller: 'driverController',
-        controllerAs: '$ctrl',
+        template: '<driver-overview id="id"></driver-overview>',
+        controller: [
+          '$routeParams',
+          '$scope',
+          ($routeParams, $scope) => {
+            $scope.id = $routeParams.id;
+          },
+        ],
       })
       .otherwise({ redirectTo: '/drivers' });
   },

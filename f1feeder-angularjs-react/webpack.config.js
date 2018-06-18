@@ -31,7 +31,9 @@ module.exports = {
       },
     ],
   },
+  stats: 'minimal',
   devServer: {
+    stats: 'minimal',
     historyApiFallback: true,
   },
   resolve: {

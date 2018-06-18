@@ -1,5 +1,6 @@
 {
   "extends": ["airbnb", "prettier"],
+  "parser": "babel-eslint",
   "globals": {
     "ENV": true,
     "VERSION": true,
@@ -11,6 +12,7 @@
     "jest": true
   },
   "rules": {
+    "jsx-a11y/alt-text": [0],
     "no-console": [0, ""],
     "prefer-arrow-callback": [0],
     "prefer-destructuring": [0],

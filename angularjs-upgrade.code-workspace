@@ -1,6 +1,5 @@
 {
-  "folders": [
-    {
+  "folders": [{
       "path": "."
     },
     {
@@ -14,6 +13,12 @@
     },
     {
       "path": "./f1feeder-angularjs-vuejs"
+    },
+    {
+      "path": "./f1feeder-angularjs-react"
+    },
+    {
+      "path": "./f1feeder-angularjs-react-cra"
     },
     {
       "path": "./f1feeder-angularjs-ngx"
