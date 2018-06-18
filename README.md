@@ -2,14 +2,13 @@
 
 This repository shows a migration path from plain old AngularJS (scripts & bower) to
 
-*   AngularJS in ES5
 *   AngularJS in ES6
-*   AngularJS in ES6 + VueJS
-*   AngularJS in ES6 + React
-*   AngularJS in Typescript
-*   AngularJS in Typescript + Angular (with @angular/upgrade)
-
-WebPack is used to bundle the JavaScript.
+*   AngularJS in ES6 + VueJS (custom webpack)
+*   AngularJS in ES6 + VueJS (with @vue/cli)
+*   AngularJS in ES6 + React (custom webpack)
+*   AngularJS in ES6 + React (with create-create-app)
+*   AngularJS in Typescript (custom webpack)
+*   AngularJS in Typescript + Angular (with @angular/cli & @angular/upgrade)
 
 > Orginal code examples adapted from :
 > https://github.com/pranavkotecha88/F1-feeder/
@@ -101,14 +100,15 @@ If you still want to have an incremental migration these are the steps to take.
 -   When an AngularJS feature changes, re-write it in the new framework
 -   When all is migrated to remove AngularJS completely
 
-## Angular or VueJS
+## Angular, VueJS or React
 
-When considering Angular or VueJS here some point to take into account:
+When considering Angular, React or VueJS here some point to take into account:
 
-*   Both frameworks are here to stay.
+*   All frameworks are here to stay.
 *   Performance is not the issue anymore.
-*   Good support and documentation is available for both.
-*   Many open source and commercial libraries available for both
+*   Good support and documentation is available for all.
+*   Many open source and commercial libraries available for all.
+
 *   Angular is more complete and powerfull but has added complexity:
 
     *   It's an opinionated framework: the Angular way
@@ -122,6 +122,7 @@ When considering Angular or VueJS here some point to take into account:
     *   ES Modules vs Angular modules
 
 *   VueJS is easy to start with:
+
     *   Simple learning curve
     *   More pure javascript code
     *   Close to AngularJS template syntax
@@ -137,9 +138,10 @@ When considering Angular or VueJS here some point to take into account:
     *   Faster and easier to unit test
     *   Average Typescript support
 
-*   React is more pure javascript:
+*   React is all aboute pure javascript:
+
     *   Initial high learning curve but gets easier once you know jsx & redux
-    *   More pure javascript code, important you know ES6+ features.
+    *   More pure javascript code. It's important you know your ES6+.
     *   More freedom to choose:
         *   ES5, ES6, Flow vs TypeScript
         *   Callbacks, promises or observables
