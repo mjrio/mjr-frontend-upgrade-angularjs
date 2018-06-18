@@ -1,4 +1,8 @@
+// for axias http service
+// import apiService from '../../core/services/apiService';
+
 export class DriversController {
+  // constructor(apiService) {
   constructor(apiService) {
     this.nameFilter = null;
     this.driversList = [];
@@ -9,6 +13,11 @@ export class DriversController {
       this.driversList =
         data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
     });
+
+    // with axias http service (with ES6 promise)
+    // $q.when(apiService.getDrivers()).then(drivers => {
+    //   this.driversList = drivers;
+    // });
 
     // rebind function so we can access it via the template
     this.searchFilter = this.searchFilter.bind(this);
