@@ -1,8 +1,7 @@
 import * as angular from 'angular';
 import { DriversController } from './driversController';
 
-const moduleName = angular
+export default angular
   .module('myApp.controllers', [])
-  .controller('driversController', DriversController).name;
-
-export default moduleName;
+  .controller('driversController', DriversController)
+  .name;

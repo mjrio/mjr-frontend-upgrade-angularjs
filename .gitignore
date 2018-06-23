@@ -1,3 +1,7 @@
 node_modules
 bower_components
 dist
+
+f1feeder-angularjs-ngx/yarn-error\.log
+
+f1feeder-angularjs-ngx-cli/yarn-error\.log

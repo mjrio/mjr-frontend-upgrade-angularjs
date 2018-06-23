@@ -192,10 +192,23 @@ Different but equal (template syntax)
 *   [Axios - Http Client](https://github.com/axios/axios)
 *   [ngVue - AngularJS VueJS helper](https://github.com/ngVue/ngVue)
 *   [react2angular - AngularJS react helper](https://github.com/coatue-oss/react2angular)
+*   [A tiny, fast, zero-dependency event emitter](https://github.com/chrisdavies/eev)
+
+### AngularJS and webpack
+
+*   [Using AngularJS with ES6 and Webpack](http://angular-tips.com/blog/2015/06/using-angular-1-dot-x-with-es6-and-webpack/)
+*   [How to: Modernized AngularJS 1.5+](https://medium.com/@narthur157/how-to-modernized-angularjs-1-5-with-es6-webpack-mocha-sass-and-components-1babb45a0381)
+*   [AngularJS 1.5 with webpack, babel, and Jest](https://github.com/kamranayub/angularjs-sample-webpack-es6-jest)
 
 ### AngularJS to Angular
 
-*   [GitHub - raymer/angularHybrid: Hybrid AngularJS/Angular4 application with WebPack](https://github.com/raymer/angularHybrid)
+*   [Book - Upgrading Angular Applications](https://leanpub.com/ngupgrade)
+*   Upgrading Angular Applications series (based on the book) 
+    -   [NgUpgrade in Depth](https://blog.nrwl.io/ngupgrade-in-depth-436a52298a00)
+    -   [Upgrading Angular Applications: Upgrade Shell](https://blog.nrwl.io/upgrading-angular-applications-upgrade-shell-4d4f4a7e7f7b)
+    -   [Two Approaches to Upgrading Angular Apps](https://blog.nrwl.io/two-approaches-to-upgrading-angular-apps-6350b33384e3)
+    -   [Using NgUpgrade Like a Pro: Lazy Loading AngularJS Applications](https://blog.nrwl.io/using-ngupgrade-like-a-pro-lazy-loading-angularjs-applications-469819f5c86)
+    -   [GitHub - raymer/angularHybrid: Hybrid AngularJS/Angular4 application with WebPack](https://github.com/raymer/angularHybrid)
 *   [Youtube - From Controllers to Components: Migrating to Angular 2](https://www.youtube.com/watch?v=e-zi9QJ1ynY)
 *   [GitHub - Demonstrating how to upgrade/migrate Angular 1 apps to Angular 2](github.com/craigshoemaker/angular-upgrade-demo)
 *   [Converting an AngularJS 1.5 app to Angular 4](https://medium.com/@satsukitv/converting-an-angularjs-1-5-app-to-angular-4-4b10c6cb8672)

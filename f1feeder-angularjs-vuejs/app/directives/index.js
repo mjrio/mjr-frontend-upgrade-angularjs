@@ -1,8 +1,7 @@
 import angular from 'angular';
 import autoFocus from './autoFocus';
 
-const module = angular
+export default angular
   .module('myApp.directives', [])
-  .directive('autoFocus', autoFocus);
-
-export default module.name;
+  .directive('autoFocus', autoFocus)
+  .name;

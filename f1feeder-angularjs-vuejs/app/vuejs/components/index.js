@@ -3,10 +3,9 @@ import Vue from 'vue';
 
 import DriverOverview from './driverOverview.vue';
 
-const module = angular
+export default angular
   .module('myApp.components', [])
   .directive('driverOverview', createVueComponent =>
     createVueComponent(Vue.component('driverOverview', DriverOverview))
-  );
-
-export default module.name;
+  )
+  .name;
