@@ -14,6 +14,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+// AngularJS
 setAngularLib(angular);
 
 platformBrowserDynamic()

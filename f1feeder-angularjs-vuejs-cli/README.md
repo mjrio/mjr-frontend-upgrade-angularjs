@@ -16,28 +16,28 @@ yarn build
 yarn build:prod
 ```
 
-## Add VueJS to Angular application
+## Using ngVue
 
-* Start from a new @vue/cli@3.0.0 project
+- Start from a new @vue/cli@3.0.0 project
 
-  * ESLint or TSLint
-  * Karma & Jest (preferable)
-  * ES6 or Typescript
+  - ESLint or TSLint
+  - Karma & Jest (preferable)
+  - ES6 or Typescript
 
-* Add angular & angular-route
+- Add angular & angular-route
 
-* Add vue, ngVue & html-loader (vuejs/angularjs integration)
+- Add vue, ngVue & html-loader (vuejs/angularjs integration)
 
-* Add support libraries
+- Add support libraries
 
-  * Add prettier, eslint-config-prettier
-  * Add axios (for http)
-  * Add loglevel (for logging)
-  * Add luxon or datefns (for Date parsing/formatting)
+  - Add prettier, eslint-config-prettier
+  - Add axios (for http)
+  - Add loglevel (for logging)
+  - Add luxon or datefns (for Date parsing/formatting)
 
-* Copy over the AngularJS application (see asj folder)
+- Copy over the AngularJS application (see asj folder)
 
-* Update main.js to add AngularJS bootstrapping
+- Update main.js to add AngularJS bootstrapping
 
 ```js
 // main.js
@@ -50,7 +50,7 @@ appModule.config($locationProvider => {
 });
 ```
 
-* Add the `ngVue` module to AngularJS
+- Add the `ngVue` module to AngularJS
 
 ```js
 import angular from 'angular';
@@ -64,7 +64,7 @@ export default angular.module('F1FeederApp', [
 ])
 ```
 
-* Update index.html to add Angular bootstrapping
+- Update index.html to add Angular bootstrapping
 
 ```html
 <body ng-app="myApp">
@@ -75,7 +75,7 @@ export default angular.module('F1FeederApp', [
 </body>
 ```
 
-* Register your vue components to AngularJS
+- Register your vue components to AngularJS
 
 ```js
 import angular from 'angular';
@@ -92,4 +92,4 @@ const module = angular
 export default module.name;
 ```
 
-* put all your static assets in the public folder
+- put all your static assets in the public folder

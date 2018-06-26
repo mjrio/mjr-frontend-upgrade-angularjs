@@ -5,3 +5,11 @@ dist
 f1feeder-angularjs-ngx/yarn-error\.log
 
 f1feeder-angularjs-ngx-cli/yarn-error\.log
+
+f1feeder-angularjs-es6/yarn-error\.log
+
+f1feeder-angularjs-scripts/yarn-error\.log
+
+f1feeder-angularjs-ts/yarn-error\.log
+
+f1feeder-angularjs-vuejs-cli/yarn-error\.log

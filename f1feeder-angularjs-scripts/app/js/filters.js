@@ -3,7 +3,7 @@
 /* Filters */
 
 angular
-  .module('myApp.filters', [])
+  .module('F1FeederApp.filters', [])
   .filter('ordinal', function ordinal() {
     // Ordinal filter
     // {{ 25 | ordinal }}   =>  25th
