@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
-import apiService from '../core/services/apiService'
-import Driver from '../components/driver';
-import DriverRaces from '../components/driverRaces';
+import apiService from '../core/services/apiService';
+import Driver from '../components/Driver';
+import DriverRaces from '../components/DriverRaces';
 
-/* eslint-disable react/prop-types, react/prefer-stateless-function */
 export default class DriverOverviewComponent extends Component {
-  static propTypes = { id: PropTypes.string.isRequired };
   state = {
     driver: null,
     races: null,
   };
 
   componentDidMount() {
-    apiService.getDriverDetails(this.props.id).then(driver => {
-      this.setState({
-        driver
-      });
+    const driverId = this.props.match.params.id;
+    apiService.getDriverDetails(driverId).then(driver => {
+      this.setState({ driver });
     });
-    apiService.getDriverRaces(this.props.id).then(races => {
-      this.setState({
-        races
-      });
+    apiService.getDriverRaces(driverId).then(races => {
+      this.setState({ races });
     });
   }
 
@@ -32,7 +26,7 @@ export default class DriverOverviewComponent extends Component {
         <nav id="secondary" className="main-nav col-md-3">
           <Driver driver={this.state.driver} />
           <br />
-          <a href="./#/drivers" className="btn btn-default">
+          <a href="/" className="btn btn-default">
             Back to drivers list
           </a>
         </nav>

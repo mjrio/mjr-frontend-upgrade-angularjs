@@ -54,7 +54,7 @@ export default class Overview extends Component {
             <tbody ui-sortable="true">
                 {filteredDrivers && filteredDrivers.map((driver, index) => {
                     return (
-                        <tr>
+                        <tr key={index}>
                             <td>{index + 1}</td>
                             <td>{driver.givenName} {driver.familyName}</td>
                         </tr>

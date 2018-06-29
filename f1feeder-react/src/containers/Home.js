@@ -52,11 +52,11 @@ export default class Overview extends Component {
           {filteredDrivers &&
             filteredDrivers.map((driver, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <td>{index + 1}</td>
                   <td>
                     <img src={`/assets/img/flags/${driver.Driver.nationality}.png`} />
-                    <a href={`#/drivers/${driver.Driver.driverId}`}>
+                    <a href={`drivers/${driver.Driver.driverId}`}>
                       {driver.Driver.givenName}&nbsp;{driver.Driver.familyName}
                     </a>
                   </td>

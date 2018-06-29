@@ -13,7 +13,7 @@ class App extends Component {
       <div className="container">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/driver" component={DriverOverview} />
+          <Route path="/drivers/:id" component={DriverOverview} />
         </Switch>
       </div>
     );
